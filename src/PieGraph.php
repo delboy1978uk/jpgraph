@@ -279,10 +279,6 @@ class PieGraph extends Graph
 
             // Should we do any final image transformation
             if ($this->iImgTrans) {
-                if (!class_exists('ImgTrans', false)) {
-                    require_once('jpgraph_imgtrans.php');
-                    //JpGraphError::Raise('In order to use image transformation you must include the file jpgraph_imgtrans.php in your script.');
-                }
 
                 $tform = new ImgTrans($this->img->img);
                 $this->img->img = $tform->Skew3D($this->iImgTransHorizon, $this->iImgTransSkewDist,

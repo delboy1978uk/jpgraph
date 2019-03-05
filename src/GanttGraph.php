@@ -850,9 +850,6 @@ class GanttGraph extends Graph
 
             // Should we do any final image transformation
             if ($this->iImgTrans) {
-                if (!class_exists('ImgTrans', false)) {
-                    require_once('jpgraph_imgtrans.php');
-                }
 
                 $tform = new ImgTrans($this->img->img);
                 $this->img->img = $tform->Skew3D($this->iImgTransHorizon, $this->iImgTransSkewDist,
