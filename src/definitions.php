@@ -5,9 +5,6 @@ define('LINESTYLE_SOLID', 1);
 define('LINESTYLE_DOTTED', 2);
 define('LINESTYLE_DASHED', 3);
 define('LINESTYLE_LONGDASH', 4);
-if (!defined("DEFAULT_GFORMAT")) {
-    define("DEFAULT_GFORMAT", "auto");
-}
 
 // jpg config inc
 define('CSIMCACHE_DIR','csimcache/');
@@ -178,6 +175,16 @@ define('FLAGSIZE2', 2);
 define('FLAGSIZE3', 3);
 define('FLAGSIZE4', 4);
 
+// plotband
+define("BAND_RDIAG", 1); // Right diagonal lines
+define("BAND_LDIAG", 2); // Left diagonal lines
+define("BAND_SOLID", 3); // Solid one color
+define("BAND_VLINE", 4); // Vertical lines
+define("BAND_HLINE", 5);  // Horizontal lines
+define("BAND_3DPLANE", 6);  // "3D" Plane
+define("BAND_HVCROSS", 7);  // Vertical/Hor crosses
+define("BAND_DIAGCROSS", 8); // Diagonal crosses
+
 // gantt
 define('MAX_GANTTIMG_SIZE_W',8000);
 define('MAX_GANTTIMG_SIZE_H',5000);
@@ -195,7 +202,6 @@ define("GANTT_HLINE",BAND_HLINE);  // Horizontal lines
 define("GANTT_3DPLANE",BAND_3DPLANE);  // "3D" Plane
 define("GANTT_HVCROSS",BAND_HVCROSS);  // Vertical/Hor crosses
 define("GANTT_DIAGCROSS",BAND_DIAGCROSS); // Diagonal crosses
-define("SECPERDAY",3600*24);
 define("LOCALE_EN","en_UK");
 define("LOCALE_SV","sv_SE");
 define("GANTT_EVEN",1);
@@ -306,15 +312,6 @@ define("PIE_VALUE_PERCENTAGE",0);
 define("PIE_VALUE_ADJPERCENTAGE",2);
 define("PIE_VALUE_ADJPER",2);
 
-// plotband
-define("BAND_RDIAG", 1); // Right diagonal lines
-define("BAND_LDIAG", 2); // Left diagonal lines
-define("BAND_SOLID", 3); // Solid one color
-define("BAND_VLINE", 4); // Vertical lines
-define("BAND_HLINE", 5);  // Horizontal lines
-define("BAND_3DPLANE", 6);  // "3D" Plane
-define("BAND_HVCROSS", 7);  // Vertical/Hor crosses
-define("BAND_DIAGCROSS", 8); // Diagonal crosses
 
 // polar
 define('POLAR_360',1);
