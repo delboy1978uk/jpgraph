@@ -36,7 +36,7 @@ $_gFlagCache = array(
     4 => null,
 );
 $__jpg_err_locale = DEFAULT_ERR_LOCALE;
-$__jpg_OldHandler = set_exception_handler(array('JpGraphException', 'defaultHandler'));
+//$__jpg_OldHandler = set_exception_handler(array('JpGraphException', 'defaultHandler'));
 $_gPredefIcons = new PredefIcons();
 $gDateLocale = new DateLocale();
 $gJpgDateLocale = new DateLocale();
