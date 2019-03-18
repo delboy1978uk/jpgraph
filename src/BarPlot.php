@@ -87,8 +87,6 @@ class BarPlot extends Plot
      */
     protected $bar_3d_hsize = 3, $bar_3d_vsize = 3;
 
-    //---------------
-    // CONSTRUCTOR
     /**
      * BarPlot constructor.
      * @param $datay
@@ -100,10 +98,7 @@ class BarPlot extends Plot
         ++$this->numpoints;
     }
 
-    //---------------
-    // PUBLIC METHODS
 
-    // Set a drop shadow for the bar (or rather an "up-right" shadow)
     /**
      * @param string $aColor
      * @param int $aHSize
@@ -135,18 +130,18 @@ class BarPlot extends Plot
         $this->value->margin += $aVSize;
     }
 
-    // DEPRECATED use SetYBase instead
+
 
     /**
+     * @deprecated Use SetYBase() instead.
      * @param $aYStartValue
      */
     public function SetYMin($aYStartValue)
     {
-        //die("JpGraph Error: Deprecated function SetYMin. Use SetYBase() instead.");
         $this->ybase = $aYStartValue;
     }
 
-    // Specify the base value for the bars
+
 
     /**
      * @param $aYStartValue

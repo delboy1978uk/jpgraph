@@ -367,6 +367,20 @@ define("FS_BOLDITALIC",9004);
 define("FF_FONT0",1);
 define("FF_FONT1",2);
 define("FF_FONT2",4);
+
+define("GRAD_VER", 1);
+define("GRAD_VERT", 1);
+define("GRAD_HOR", 2);
+define("GRAD_MIDHOR", 3);
+define("GRAD_MIDVER", 4);
+define("GRAD_CENTER", 5);
+define("GRAD_WIDE_MIDVER", 6);
+define("GRAD_WIDE_MIDHOR", 7);
+define("GRAD_LEFT_REFLECTION", 8);
+define("GRAD_RIGHT_REFLECTION", 9);
+define("GRAD_RAISED_PANEL", 10);
+define("GRAD_DIAGONAL", 11);
+
 define('CHINESE_TTF_FONT','bkai00mp.ttf');
 define("LANGUAGE_GREEK",false);
 define("GREEK_FROM_WINDOWS",false);

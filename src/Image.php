@@ -148,6 +148,15 @@ class Image
      */
     protected $ff_font2_bold;
 
+    /** @var int $width */
+    public $width;
+
+    /** @var int $height*/
+    public $height;
+
+    /** @var int $line_weight */
+    public $line_weight;
+
 
     //---------------
     // CONSTRUCTOR
@@ -290,7 +299,7 @@ class Image
 
         $this->CreateRawCanvas($aWidth, $aHeight);
         // Set canvas color (will also be the background color for a
-        // a pallett image
+        // a pallett imagetransl
         $this->SetColor($this->canvascolor);
         $this->FilledRectangle(0, 0, $this->width - 1, $this->height - 1);
 
@@ -2555,37 +2564,4 @@ class Image
             imageSetPixel($img, $cx - $iy, $cy - $ix, $draw);
         }
     }
-
-    /**
-     * @param $name
-     * @return float|int
-     * @throws JpGraphExceptionL
-     */
-    public function __get($name)
-    {
-
-        if (strpos($name, 'raw_') !== false) {
-            // if $name == 'raw_left_margin' , return $this->_left_margin;
-            $variable_name = '_' . str_replace('raw_', '', $name);
-            return $this->$variable_name;
-        }
-
-        $variable_name = '_' . $name;
-
-        if (isset($this->$variable_name)) {
-            return $this->$variable_name * SUPERSAMPLING_SCALE;
-        } else {
-            JpGraphError::RaiseL('25132', $name);
-        }
-    }
-
-    /**
-     * @param $name
-     * @param $value
-     */
-    public function __set($name, $value)
-    {
-        $this->{'_' . $name} = $value;
-    }
-
 }

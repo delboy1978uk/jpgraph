@@ -93,6 +93,9 @@ class Text
      */
     private $iBoxType = 1; // Which variant of filled box around text we want
 
+
+    public $raw_font_size;
+
     /**
      * Text constructor.
      * @param string $aTxt
@@ -513,39 +516,5 @@ class Text
 
         $aImg->PopColor($this->color);
     }
+}
 
-    /**
-     * @param $name
-     * @return float|int
-     * @throws JpGraphExceptionL
-     */
-    public function __get($name)
-    {
-
-        if (strpos($name, 'raw_') !== false) {
-            // if $name == 'raw_left_margin' , return $this->_left_margin;
-            $variable_name = '_' . str_replace('raw_', '', $name);
-            return $this->$variable_name;
-        }
-
-        $variable_name = '_' . $name;
-
-        if (isset($this->$variable_name)) {
-            return $this->$variable_name * SUPERSAMPLING_SCALE;
-        } else {
-            JpGraphError::RaiseL('25132', $name);
-        }
-    }
-
-    /**
-     * @param $name
-     * @param $value
-     */
-    public function __set($name, $value)
-    {
-        $this->{'_' . $name} = $value;
-    }
-} // Class
-
-
-?>
